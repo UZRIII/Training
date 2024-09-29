@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جدول التمارين الأسبوعي</title>
+    <link rel="stylesheet" href="styles.css" id="theme-style">
+</head>
+
+<body>
+
+    <h1>جدول التمارين الأسبوعي</h1>
+
+    <!-- زر لتفعيل الوضع المظلم -->
+    <div style="text-align: center; margin-bottom: 20px;">
+        <button id="toggle-dark-mode">
+            تفعيل الوضع المظلم
+        </button>
+    </div>
+
+    <table>
+        <tr>
+            <th>اليوم</th>
+            <th>التمارين</th>
+            <th>تمارين الإحماء</th>
+            <th>تمارين التهدئة</th>
+        </tr>
+        <tr>
+            <td><strong>الخميس</strong></td>
+            <td><strong>صدر وتراي</strong><br>
+                - ضغط صدر على الجهاز (Chest Press)<br>
+                - ضغط مائل على الجهاز (Incline Press)<br>
+                - تفتيح صدر على الجهاز (Chest Fly)<br>
+                - سحب كابل لتراي (Tricep Pushdown)
+            </td>
+            <td>- مشي خفيف (5-10 دقائق)<br>- دوران الكتفين<br>- رفع الركبة<br>- إندفاع متقدم</td>
+            <td>- كارديو Trademail (10-20 دقيقة)<br>- إطالة الصدر<br>- إطالة الساقين<br>- إطالة الكتفين</td>
+        </tr>
+        <tr>
+            <td><strong>الجمعة</strong></td>
+            <td><strong>ظهر وباي</strong><br>
+                - سحب علوي على الجهاز (Lat Pulldown)<br>
+                - سحب بار مائل (Bent Over Row)<br>
+                - آلة كيرلز (Machine Bicep Curl)
+            </td>
+            <td>- مشي خفيف (5-10 دقائق)<br>- دوران المعصمين<br>- تحريك الساقين</td>
+            <td>- كارديو Trademail (10-20 دقيقة)<br>- إطالة الظهر<br>- إطالة باي</td>
+        </tr>
+        <tr>
+            <td><strong>السبت</strong></td>
+            <td>راحة</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><strong>الأحد</strong></td>
+            <td>راحة</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><strong>الاثنين</strong></td>
+            <td><strong>كتف</strong><br>
+                - ضغط كتف على الجهاز (Shoulder Press)<br>
+                - رفع جانبي على الجهاز (Lateral Raise Machine)<br>
+                - رفع أمامي على الجهاز (Front Raise Machine)
+            </td>
+            <td>- مشي خفيف (5-10 دقائق)<br>- دوران الكتفين<br>- رفع جانبي</td>
+            <td>- كارديو Trademail (10-20 دقيقة)<br>- إطالة الكتفين<br>- إطالة الذراعين</td>
+        </tr>
+        <tr>
+            <td><strong>الثلاثاء</strong></td>
+            <td><strong>ساقين</strong><br>
+                - ضغط ساق على الجهاز (Leg Press)<br>
+                - قرفصاء على الجهاز (Squat Machine)<br>
+                - ثني ساق على الجهاز (Leg Curl Machine)
+            </td>
+            <td>- مشي خفيف (5-10 دقائق)<br>- دوران الركبتين<br>- قرفصاء خفيف</td>
+            <td>- كارديو Trademail (10-20 دقيقة)<br>- إطالة الساقين<br>- إطالة العضلات الخلفية</td>
+        </tr>
+        <tr>
+            <td><strong>الأربعاء</strong></td>
+            <td>راحة</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <script>
+        // دالة لتفعيل الوضع المظلم
+        document.getElementById('toggle-dark-mode').addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+            const tableRows = document.querySelectorAll('tr');
+            const tableH1 = document.querySelectorAll('h1');
+            const button = document.querySelectorAll('button');
+            tableRows.forEach(row => {
+                row.classList.toggle('dark-mode');
+            });
+            tableH1.forEach(row => {
+                row.classList.toggle('dark-mode');
+            });
+            button.forEach(row => {
+                row.classList.toggle('dark-mode');
+            });
+            this.textContent = this.textContent === 'ايقاف الوضع المظلم' ? 'تفعيل الوضع المظلم' : 'ايقاف الوضع المظلم';
+        });
+    </script>
+
+</body>
+
+</html>
